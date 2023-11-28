@@ -1,6 +1,8 @@
-const app = require('express')();
+const express = require("express");
+const app = express;
 
 const PORT = process.env.PORT || 3341;
+
 app.listen(PORT, () => {
   console.log(`Servidor rodando na porta ${PORT}`);
 });
@@ -19,7 +21,7 @@ function gerarSenha(tamanhoSenha) {
 
 app.use(express.json());
 
-app.post('/api/gerarSenha', (req, res) => {
+app.post("/api/gerarSenha", (req, res) => {
   const tamanhoSenha = req.body.tamanhoSenha || 12; // tamanho padrão de senha
 
   const senha = gerarSenha(tamanhoSenha);
