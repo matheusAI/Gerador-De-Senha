@@ -1,8 +1,7 @@
 const express = require("express");
 const app = express();
 
-const caracteres =
-  "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+const caracteres = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 
 app.get("/gerarSenha/:tamanhoSenha", (req, res) => {
   const tamanhoSenha = parseInt(req.params.tamanhoSenha) || 12;
