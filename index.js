@@ -6,7 +6,6 @@ const caracteres =
 
 app.get("/gerarSenha/:tamanhoSenha", (req, res) => {
   const tamanhoSenha = parseInt(req.params.tamanhoSenha.replace(/\D/g, "")) || 12;
-  console.log("Tamanho da senha:", tamanhoSenha);
 
   let senha = "";
 
