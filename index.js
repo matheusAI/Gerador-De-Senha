@@ -1,5 +1,13 @@
 const express = require("express");
+const cors =require("cors")
 const app = express();
+
+const corsOptions = {
+  origin: "*",
+  methods: "GET",
+};
+
+app.use(cors(corsOptions));
 
 const caracteres =
   "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
